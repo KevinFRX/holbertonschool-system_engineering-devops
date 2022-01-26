@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -FmXa
+ls -FpXa
