@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R ugo+x home/holberton-system_engineering-devops/0x01-shell_permissions/
+find home/holberton-system_engineering-devops/0x01-shell_permissions/ -type d -exec chmod -R +x {} \;
