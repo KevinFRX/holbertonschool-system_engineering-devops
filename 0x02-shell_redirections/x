@@ -1,5 +1,5 @@
 #!/bin/bash
 git add .
-read $PATH
-git commit -m "$PATH"
+read var
+git commit -m "$var"
 git push
