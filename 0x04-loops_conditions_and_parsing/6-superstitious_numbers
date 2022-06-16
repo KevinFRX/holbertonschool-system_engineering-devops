@@ -5,15 +5,20 @@ x=1
 while [ $x -le 20 ]
 do
 	echo "$x"
-	if [ $x -eq 4 ]
-	then
-		echo "bad luck from China"
-	elif [ $x -eq 9 ]
-	then
-		echo "bad luck from Japan"
-	elif [ $x -eq 17 ]
-        then
-                echo "bad luck from Italy"
-	fi
+
+	case $x in
+		
+		4)
+			echo "bad luck from China"
+			;;
+		
+		8)
+			echo "bad luck from Japan"
+			;;
+	
+		17)
+                	echo "bad luck from Italy"
+			;;
+	esac
 	(( x++ ))
 done
