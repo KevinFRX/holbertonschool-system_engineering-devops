@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Displays the content of this directory in list format, after the first -
+
+for i in *
+do
+	echo ${i#*-}
+done
