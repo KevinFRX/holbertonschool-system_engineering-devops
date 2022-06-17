@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# Displays the content of this directory in list format, after the first -
+# Displays the content of this directory in list format
 
-list=$(ls)
-for i in $list
+for i in *
 do
-	echo $i | cut -f2 -d"-"
+	echo "$i" | cut -f2 -d"-"
 done
