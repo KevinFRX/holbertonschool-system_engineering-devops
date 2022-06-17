@@ -1,5 +1,5 @@
-#!/bin/bash/env bash
-# cript that gives you information about the school file
+#!/usr/bin/env bash
+# script that gives you information about the school file
 
 if [ -e "school" ]
 then
