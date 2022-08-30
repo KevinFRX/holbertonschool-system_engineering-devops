@@ -2,5 +2,6 @@
 # Install nginx on your web-01 server
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo echo "Hello World" > /var/www/html/index.nginx-debian.html
-sudo service ngix start
+sudo chmod -R 777 /var/www/html
+sudo echo "Hello World" > /var/www/html/index.html
+sudo /etc/init.d/nginx restart
