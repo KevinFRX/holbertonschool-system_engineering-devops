@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Configure your Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page
-udo apt -y update
-sudo apt -y install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
 sudo chmod -R 777 /var/www/html
 sudo echo "Hello World" | sudo tee /var/www/html/index.html
 sudo /etc/init.d/nginx stop
