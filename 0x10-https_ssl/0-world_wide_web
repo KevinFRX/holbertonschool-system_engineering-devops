@@ -11,13 +11,7 @@ print_info()
 
 if [ "$#" -eq 2 ];
 then
-	for subdomain in "www" "lb-01" "web-01" "web-02"
-	do
-		if [ "$2" == "$subdomain" ];
-		then
-			print_info "$1" "$2"
-		fi
-	done
+	print_info "$1" "$2"
 elif [ "$#" -eq 1 ];
 then
 	print_info "$1" "www"
