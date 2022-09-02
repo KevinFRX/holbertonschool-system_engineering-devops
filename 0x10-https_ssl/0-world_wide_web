@@ -6,9 +6,7 @@ print_info()
 	printf "The subdomain %s is a " "$2"
 	dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "%s", $4}'
 	printf " record and points to "
-	dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "%s", $5}'
-	echo ""
-
+	dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "%s\n", $5}'
 }
 
 if [ "$#" -eq 2 ];
