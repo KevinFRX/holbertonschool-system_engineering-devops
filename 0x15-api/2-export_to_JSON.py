@@ -15,7 +15,7 @@ if __name__ == "__main__":
                         format(ID)).json()
     username = user.get('username')
     todos = requests.get("https://jsonplaceholder.typicode.com/todos").json()
-    taskº   _list = []
+    task_list = []
     task_dict = {}
 
     for todo in todos:
