@@ -9,7 +9,7 @@ import sys
 
 
 if __name__ == "__main__":
-    ID = sys.argv[1]
+    ID = int(sys.argv[1])
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
                         format(ID)).json()
     name = user.get('name')
@@ -19,13 +19,13 @@ if __name__ == "__main__":
     title = []
 
     for todo in todos:
-        if todo.get('userId') == int(ID):
+        if todo.get('userId') == ID:
             tt += 1
             if todo.get('completed'):
                 ct += 1
                 title.append(todo.get('title'))
 
-    print("EMployee {} is done with tasks({}/{}):".format(name, ct, tt))
+    print("Employee {} is done with tasks({}/{}):".format(name, ct, tt))
 
     for task in title:
         print("\t {}".format(task))
