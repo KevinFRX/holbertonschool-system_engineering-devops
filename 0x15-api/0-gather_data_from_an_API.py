@@ -9,7 +9,7 @@ import sys
 
 
 if __name__ == "__main__":
-    ID = int(sys.argv[1])
+    ID = sys.argv[1]
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
                         format(ID)).json()
     name = user.get('name')
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     title = []
 
     for todo in todos:
-        if todo.get('userId') == ID:
+        if todo.get('userId') == int(ID):
             tt += 1
             if todo.get('completed'):
                 ct += 1
