@@ -19,10 +19,11 @@ if __name__ == "__main__":
     task_dict = {}
 
     for todo in todos:
-        task_dict["task"] = todo.get('title')
-        task_dict["completed"] = todo.get('completed')
-        task_dict["username"] = username
-        task_list.append(task_dict)
+        if todo.get('userId') == int(ID):
+            task_dict["task"] = todo.get('title')
+            task_dict["completed"] = todo.get('completed')
+            task_dict["username"] = username
+            task_list.append(task_dict)
 
     obj = {}
     obj[ID] = task_list
