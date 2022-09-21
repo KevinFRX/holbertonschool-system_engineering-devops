@@ -19,6 +19,6 @@ def top_ten(subreddit):
 
     if response.status_code == 200:
         for post in response.json()['data']['children']:
-            print(post['data']['title'])
+            print(post['data']['title'].encode('utf-8'))
     else:
         print(None)
