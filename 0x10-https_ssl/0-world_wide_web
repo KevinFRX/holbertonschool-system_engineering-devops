@@ -3,19 +3,19 @@
 
 print_info()
 {
-	printf "The subdomain %s is a " "$2"
-	dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "%s", $4}'
-	printf " record and points to "
-	dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "%s\n", $5}'
+    printf "The subdomain %s is a " "$2"
+    dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "%s", $4}'
+    printf " record and points to "
+    dig "$2.$1" | awk '/ANSWER SECTION:/{getline; printf "%s\n", $5}'
 }
 
 if [ "$#" -eq 2 ];
 then
-	print_info "$1" "$2"
+    print_info "$1" "$2"
 elif [ "$#" -eq 1 ];
 then
-	print_info "$1" "www"
-	print_info "$1" "lb-01"
-	print_info "$1" "web-01"
-	print_info "$1" "web-02"
+    print_info "$1" "www"
+    print_info "$1" "lb-01"
+    print_info "$1" "web-01"
+    print_info "$1" "web-02"
 fi
